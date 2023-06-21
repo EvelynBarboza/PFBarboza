@@ -13,8 +13,8 @@ header nav .navbar-nav li {
   font-size: x-large;
 }
 header nav .navbar-nav li .nav-link:hover {
-  cursor: pointer;
   color: #f6d5f2;
+  transform: scale(1.1);
 }
 
 /*¡¡¡¡¡¡¡¡¡¡     FOOTER     !!!!!!!!!!!!*/
@@ -52,8 +52,8 @@ main section .container .sale {
   font-size: 70px;
 }
 main section .container .sale:hover {
-  cursor: pointer;
   color: #f6d5f2;
+  transform: scale(2.5);
 }
 main section .container .off {
   color: rgb(205, 195, 205);
@@ -146,6 +146,7 @@ article .card {
 }
 article .card .card-body .card-text {
   padding: 20px;
+  text-align: center;
 }
 
 .logoentero {

@@ -7,7 +7,6 @@
 *{
     font-family: $font;
 }
-
 header {
         font-family: $font;
         nav {
@@ -16,8 +15,8 @@ header {
                     font-size: x-large;
                     .nav-link {
                         &:hover {
-                        cursor: pointer;
                         color: $color-fondo;
+                        transform: scale(1.1);
                         }
                     }
                 }
@@ -64,15 +63,12 @@ main {
                 font-family: $font;
                 color: #e470c3;
                 font-size: 70px;
-
                 &:hover {
-                    cursor: pointer;
                     color: $color-fondo;
-
+                    transform: scale(2.5);
                 }
             }
         }
-
         .container {
             .off {
                 color: rgb(205, 195, 205);
@@ -183,6 +179,7 @@ article {
         .card-body {
             .card-text {
                 padding: 20px;
+                text-align: center;
             }
         }
     }  
