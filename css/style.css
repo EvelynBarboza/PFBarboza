@@ -34,6 +34,10 @@ header nav .navbar-nav li .nav-link:hover {
   font-size: 300%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡    INDEX    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .body {
   background-image: url(../images/Pauli-portada.jpg);
@@ -119,8 +123,6 @@ main .container1 .buscarformulario {
 
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡             METODOS DE COMPRA            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 main .card .card-body {
-  /* margin: 0.4cm;
-   margin-top: 0.4cm;*/
   background-color: #f6d5f2;
 }
 main .card .card-body .card-title .card-text {
@@ -141,6 +143,7 @@ main .card .card-body .card-title .card-text .listamediospago li {
 
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡             NOSOTROS            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 article .card {
+  margin: 0.3cm;
   background-color: #f6d5f2;
   align-content: center;
 }

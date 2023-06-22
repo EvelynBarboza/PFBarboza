@@ -42,6 +42,10 @@ header {
     font-size: 300%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡    INDEX    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .body {
@@ -147,8 +151,6 @@ main {
 main {
     .card {
         .card-body {
-           /* margin: 0.4cm;
-            margin-top: 0.4cm;*/
             background-color: $color-fondo;
             .card-title {
                 .card-text {
@@ -174,6 +176,7 @@ main {
 
 article {
     .card {
+        margin: 0.3cm;
         background-color: $color-fondo;
         align-content: center;
         .card-body {
