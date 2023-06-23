@@ -1,0 +1,38 @@
+@media (max-width: 480px) {
+    .logo {
+        width: 460px;
+    }
+    .titulo { 
+        display: flex;
+        justify-content: center;
+        font-size: 200%;
+       }
+    .body {
+        background-size: 480px;
+    }
+    .card {
+        @include card-productos (480px, 900px, 0px)
+    }
+    .logoentero {
+        margin-left: 100px;
+        width: 5cm;
+    }
+    .comentario {
+        p {
+            font-size: medium;
+        }
+    }
+    .pie {
+        div {
+            .titulopie {
+                font-size: 0.5cm; 
+            }
+            .redes {
+                font-size: 0.4cm; 
+            }
+            .contact {
+                font-size: 0.4cm; 
+            }
+        }
+    }
+}

@@ -1,50 +1,59 @@
-/* ¡¡¡¡¡¡¡¡¡¡     HEADER     !!!!!!!!!!! */
 
 @import url('https://fonts.googleapis.com/css2?family=Crushed&display=swap');
 @import "variables";
 @import "mixins";
 @import "maps";
-
+@import "queries";
 
 *{
     font-family: $font;
 }
+
+/* ¡¡¡¡¡¡¡¡¡¡     HEADER     !!!!!!!!!!! */
 header {
-        font-family: $font;
+    font-family: $font;
+    .navbar {
+        background-color: $color-nav;
+    }
         nav {
             div {
-                .logo {
-                    @media (max-width: 480px) {
-                        .logo {
-                            width: 460px;
-                    }
-                }
-            }
-                div {
-                    .navbar-nav {
-                        li {
-                            font-size: x-large;
-                                .nav-link {
-                                    &:hover {
-                                        color: $color-fondo;
-                                        transform: scale(1.1);
-                                    }
-                         }
+                .navbar-nav {
+                     li {
+                        font-size: x-large;
+                             .nav-link {
+                                &:hover {
+                                    color: $color-letranav;
+                                    transform: scale(1.1);
+                                }
+                            }
                     }
                 }
             }
         }
     }
-}
 /*¡¡¡¡¡¡¡¡¡¡     FOOTER     !!!!!!!!!!!!*/
 
 .pie {
-    font-family: $font;
-    text-decoration: none;
-    font-size: 1em; 
-    text-align: center;
-    margin-top: 100px;
+    div {
+        .titulopie {
+            text-decoration: none;
+            font-size: 0.7cm; 
+            text-align: center;
+            margin-top: 100px;
+            background-color: $color-nav;
+        }
+        .redes {
+            font-size: 0.5cm; 
+            text-decoration: none;
+            text-align: center;
+            }
+        .contact {
+            font-size: 0.5cm; 
+            text-align: center;
+        }
+    }
 }
+
 /*¡¡¡¡¡¡¡¡¡     TITULOS     !!!!!!!!!!!*/
 
 .titulo {
@@ -52,15 +61,6 @@ header {
     font-family: $font;
     margin: 2em;
     font-size: 300%;
-}
-
-@media (max-width: 480px) {
-       .titulo { 
-        display: flex;
-        justify-content: center;
-        font-size: 200%;
-       }
-   
 }
 
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡    INDEX    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -72,12 +72,6 @@ header {
     background-size: 600px;
     background-position: right;
     background-origin: content-box;
-}
-
-@media (max-width: 480px) {
-    .body {
-        background-size: 480px;
-    }
 }
 
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡   MAIN   !!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -133,11 +127,11 @@ main {
                 box-shadow: map-get($card, sombreado);
                 background-color: $color-fondo;
                 @include card-productos (460px, 900px, 30px);
-                @media (max-width: 480px) {
+                /*@media (max-width: 480px) {
                     .card {
                         @include card-productos (480px, 900px, 0px)
                     }
-                }
+                }*/
                 .card-body {
                     margin-top: 0.4cm;
                     .card-title {
@@ -203,7 +197,7 @@ main {
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡             NOSOTROS            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 article {
-    .card {
+    .cardn {
         margin: 0.3cm;
         background-color: $color-fondo;
         align-content: center;
@@ -222,15 +216,9 @@ article {
     left: 100px;
     margin-left: 100px;
     box-shadow: map-get($card, sombreado);
-    @media (min-width: 480px) {
-        .logoentero {
-            margin-left: 100px;
-            width: 5cm;
-        }
-    }
 }
 
-/*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡              CONTACTO            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡          CONTACTO            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 main {
     section {
