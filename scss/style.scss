@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Crushed&display=swap');
 @import "variables";
 @import "mixins";
+@import "maps";
+
 
 *{
     font-family: $font;
@@ -10,20 +12,30 @@
 header {
         font-family: $font;
         nav {
-            .navbar-nav {
-                li {
-                    font-size: x-large;
-                    .nav-link {
-                        &:hover {
-                        color: $color-fondo;
-                        transform: scale(1.1);
-                        }
+            div {
+                .logo {
+                    @media (max-width: 480px) {
+                        .logo {
+                            width: 460px;
+                    }
+                }
+            }
+                div {
+                    .navbar-nav {
+                        li {
+                            font-size: x-large;
+                                .nav-link {
+                                    &:hover {
+                                        color: $color-fondo;
+                                        transform: scale(1.1);
+                                    }
+                         }
                     }
                 }
             }
         }
     }
-
+}
 /*¡¡¡¡¡¡¡¡¡¡     FOOTER     !!!!!!!!!!!!*/
 
 .pie {
@@ -42,8 +54,13 @@ header {
     font-size: 300%;
 }
 
-body {
-    overflow-x: hidden;
+@media (max-width: 480px) {
+       .titulo { 
+        display: flex;
+        justify-content: center;
+        font-size: 200%;
+       }
+   
 }
 
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡    INDEX    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -55,6 +72,12 @@ body {
     background-size: 600px;
     background-position: right;
     background-origin: content-box;
+}
+
+@media (max-width: 480px) {
+    .body {
+        background-size: 480px;
+    }
 }
 
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡   MAIN   !!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -103,16 +126,20 @@ main {
 
 main {
     .container2 {
-        justify-items: center;
+        align-items: center;
+        /*display: flex;*/
             .card {
-                align-items: center;
+                /*align-items: center;*/
+                box-shadow: map-get($card, sombreado);
                 background-color: $color-fondo;
-                @include card-productos (460px, 900px, 20px);
-                justify-content: center;
+                @include card-productos (460px, 900px, 30px);
+                @media (max-width: 480px) {
+                    .card {
+                        @include card-productos (480px, 900px, 0px)
+                    }
+                }
                 .card-body {
-                    /*margin: 0.4cm;*/
                     margin-top: 0.4cm;
-                    /*background-color: $color-fondo;*/
                     .card-title {
                         font-family: $font;
                         color: $color-tituloS;
@@ -123,11 +150,10 @@ main {
             .card-top {
                 align-items: center;
                 background-color: $color-fondo;
+                box-shadow: map-get($card, sombreado);
                 @include card-top (460PX, 340px, 20px);
                 .card-body {
                     margin: 0.4cm;
-                    margin-top: 0.4cm;
-                    background-color: $color-fondo;
                     .card-title {
                         font-family: $font;
                         color: $color-tituloS;
@@ -150,9 +176,11 @@ main {
 
 main {
     .card {
+        background-color: $color-fondo;
+        box-shadow: map-get($card, sombreado);
         .card-body {
-            background-color: $color-fondo;
-            .card-title {
+            .card-title1 {
+                padding: 20px;
                 .card-text {
                     font-family: $font;
                     color: $color-black;
@@ -179,6 +207,7 @@ article {
         margin: 0.3cm;
         background-color: $color-fondo;
         align-content: center;
+        box-shadow: map-get($card, sombreado);
         .card-body {
             .card-text {
                 padding: 20px;
@@ -192,6 +221,13 @@ article {
     top: 1000px;
     left: 100px;
     margin-left: 100px;
+    box-shadow: map-get($card, sombreado);
+    @media (min-width: 480px) {
+        .logoentero {
+            margin-left: 100px;
+            width: 5cm;
+        }
+    }
 }
 
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡              CONTACTO            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
